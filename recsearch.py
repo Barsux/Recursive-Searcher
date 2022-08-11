@@ -93,11 +93,12 @@ class Filesearcher:
 
 
 def main():
-    if platform.system() not in supported_platforms:
+    cli_platform = str(platform.system())
+    if cli_platform not in supported_platforms:
         print("This program is not supported on your platform")
         print(platform)
         return
-    if platform.system() == "Windows":
+    if cli_platform == "Windows":
         os.system('cls')
         os.system('color')
     else:
